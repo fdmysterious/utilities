@@ -19,7 +19,7 @@ int main(int argc, const char *argv[])
     std::cout << "#ifndef HEADER_" << NAME << std::endl << "#define HEADER_" << NAME << std::endl
               << "#include <cstdint>"     << std::endl
               << "namespace " << name << std::endl << "{" << std::endl
-              << "    std::uint8_t data[] {"
+              << "    const std::uint8_t data[] {"
     ;
 
     char  c;
@@ -33,7 +33,7 @@ int main(int argc, const char *argv[])
     }
 
     std::cout << std::endl << "    };" << std::endl
-              << "    std::uint64_t size = " << count << ";" << std::endl
+              << "    const std::uint64_t size = " << count << ";" << std::endl
               << "}" << std::endl
               << "#endif" << std::endl
     ;
